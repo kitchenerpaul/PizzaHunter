@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Pizza-->
+        <!--Nearby Pizza Locations-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Scw-Yu-uq7">
-                                <rect key="frame" x="0.0" y="64" width="600" height="297"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="272"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -57,7 +57,7 @@
                                 </connections>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Directions to pizza text view" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pB1-V2-Ba8">
-                                <rect key="frame" x="0.0" y="381" width="600" height="219"/>
+                                <rect key="frame" x="20" y="361" width="560" height="219"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="219" id="kHv-Ir-LyY"/>
@@ -69,16 +69,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pB1-V2-Ba8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="8jL-10-ZpZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pB1-V2-Ba8" secondAttribute="bottom" id="9Po-zO-uIv"/>
+                            <constraint firstItem="pB1-V2-Ba8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8jL-10-ZpZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pB1-V2-Ba8" secondAttribute="bottom" constant="20" id="9Po-zO-uIv"/>
                             <constraint firstItem="Scw-Yu-uq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Fn2-H1-lSd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pB1-V2-Ba8" secondAttribute="trailing" constant="-20" id="QKN-tx-XEP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pB1-V2-Ba8" secondAttribute="trailing" id="QKN-tx-XEP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Scw-Yu-uq7" secondAttribute="trailing" constant="-20" id="Ye5-jo-Hoi"/>
-                            <constraint firstItem="pB1-V2-Ba8" firstAttribute="top" secondItem="Scw-Yu-uq7" secondAttribute="bottom" constant="20" id="eEB-bl-JsV"/>
+                            <constraint firstItem="pB1-V2-Ba8" firstAttribute="top" secondItem="Scw-Yu-uq7" secondAttribute="bottom" constant="25" id="eEB-bl-JsV"/>
                             <constraint firstItem="Scw-Yu-uq7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGf-fg-3cw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pizza" id="jUX-al-5Pn"/>
+                    <navigationItem key="navigationItem" title="Nearby Pizza Locations" id="jUX-al-5Pn"/>
                     <connections>
                         <outlet property="directionsTextView" destination="pB1-V2-Ba8" id="wUX-iF-azS"/>
                         <outlet property="tableView" destination="Scw-Yu-uq7" id="tRt-s3-R5V"/>

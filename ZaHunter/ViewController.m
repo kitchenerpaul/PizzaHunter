@@ -19,7 +19,7 @@
 @property CLLocationManager *locationManager;
 @property CLLocation *currentLocation;
 @property CLLocation *destinationLocation;
-
+@property Pizzeria *pizzeria;
 @property NSMutableArray *pizzeriaNames;
 
 @property double latitude;
@@ -39,6 +39,7 @@
     [self.locationManager startUpdatingLocation];
 
     self.pizzeriaNames = [NSMutableArray new];
+    self.pizzeria = [Pizzeria new];
 
 }
 
@@ -60,6 +61,7 @@
     MKLocalSearch *search = [[MKLocalSearch alloc]initWithRequest:request];
     [search startWithCompletionHandler:^(MKLocalSearchResponse * _Nullable response, NSError * _Nullable error) {
         NSArray *mapItems = response.mapItems;
+        NSLog(@"mapItems: %@", mapItems);
         [self savePizzeriaArray:mapItems];
     }];
 }
@@ -69,7 +71,6 @@
     [self.tableView reloadData];
 }
 
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return self.pizzeriaNames.count;
@@ -77,9 +78,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"PizzaCellID"];
-    NSString *name = [[self.pizzeriaNames objectAtIndex:indexPath.row]valueForKey:@"name"];
-    cell.textLabel.text = name;
-    cell.detailTextLabel.text = 
+    self.pizzeria.pizzeriaName = [[self.pizzeriaNames objectAtIndex:indexPath.row]valueForKey:@"name"];
+//    self.pizzeria.pizzeriaDistance = [NSString stringWithFormat:@"%f", [self.currentLocation distanceFromLocation:[[self.pizzeriaNames objectAtIndex:indexPath.row]valueForKey:@"center"]]];
+    cell.textLabel.text = self.pizzeria.pizzeriaName;
+    cell.detailTextLabel.text = self.pizzeria.pizzeriaDistance;
     return cell;
 }
 
