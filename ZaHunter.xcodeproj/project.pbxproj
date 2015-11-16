@@ -13,6 +13,9 @@
 		176278501BCEF91200747057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1762784E1BCEF91200747057 /* Main.storyboard */; };
 		176278521BCEF91200747057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176278511BCEF91200747057 /* Assets.xcassets */; };
 		176278551BCEF91200747057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176278531BCEF91200747057 /* LaunchScreen.storyboard */; };
+		1762785E1BCEFDD700747057 /* Pizzeria.m in Sources */ = {isa = PBXBuildFile; fileRef = 1762785D1BCEFDD700747057 /* Pizzeria.m */; };
+		176278601BCEFF1500747057 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762785F1BCEFF1500747057 /* CoreLocation.framework */; };
+		176278621BCEFF1A00747057 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176278611BCEFF1A00747057 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		176278511BCEF91200747057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		176278541BCEF91200747057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		176278561BCEF91200747057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1762785C1BCEFDD600747057 /* Pizzeria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pizzeria.h; sourceTree = "<group>"; };
+		1762785D1BCEFDD700747057 /* Pizzeria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizzeria.m; sourceTree = "<group>"; };
+		1762785F1BCEFF1500747057 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		176278611BCEFF1A00747057 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,15 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176278621BCEFF1A00747057 /* MapKit.framework in Frameworks */,
+				176278601BCEFF1500747057 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170D9D311BF9611500F0F1F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1762785C1BCEFDD600747057 /* Pizzeria.h */,
+				1762785D1BCEFDD700747057 /* Pizzeria.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		176278391BCEF91100747057 = {
 			isa = PBXGroup;
 			children = (
+				176278611BCEFF1A00747057 /* MapKit.framework */,
+				1762785F1BCEFF1500747057 /* CoreLocation.framework */,
 				176278441BCEF91200747057 /* ZaHunter */,
 				176278431BCEF91200747057 /* Products */,
 			);
@@ -58,14 +78,10 @@
 		176278441BCEF91200747057 /* ZaHunter */ = {
 			isa = PBXGroup;
 			children = (
-				176278481BCEF91200747057 /* AppDelegate.h */,
-				176278491BCEF91200747057 /* AppDelegate.m */,
+				1762784E1BCEF91200747057 /* Main.storyboard */,
 				1762784B1BCEF91200747057 /* ViewController.h */,
 				1762784C1BCEF91200747057 /* ViewController.m */,
-				1762784E1BCEF91200747057 /* Main.storyboard */,
-				176278511BCEF91200747057 /* Assets.xcassets */,
-				176278531BCEF91200747057 /* LaunchScreen.storyboard */,
-				176278561BCEF91200747057 /* Info.plist */,
+				170D9D311BF9611500F0F1F3 /* Model */,
 				176278451BCEF91200747057 /* Supporting Files */,
 			);
 			path = ZaHunter;
@@ -74,6 +90,11 @@
 		176278451BCEF91200747057 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				176278481BCEF91200747057 /* AppDelegate.h */,
+				176278491BCEF91200747057 /* AppDelegate.m */,
+				176278511BCEF91200747057 /* Assets.xcassets */,
+				176278531BCEF91200747057 /* LaunchScreen.storyboard */,
+				176278561BCEF91200747057 /* Info.plist */,
 				176278461BCEF91200747057 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -153,6 +174,7 @@
 				1762784D1BCEF91200747057 /* ViewController.m in Sources */,
 				1762784A1BCEF91200747057 /* AppDelegate.m in Sources */,
 				176278471BCEF91200747057 /* main.m in Sources */,
+				1762785E1BCEFDD700747057 /* Pizzeria.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +321,7 @@
 				1762785B1BCEF91200747057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
